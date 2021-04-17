@@ -10,7 +10,6 @@ jobs:
   update-data:
     name: "Update Data"
     runs-on: ubuntu-18.04
-    if: env.GITHUB_REPOSITORY != 'azu/github-sponsor-report-template'
     steps:
       - name: checkout
         uses: actions/checkout@v2
