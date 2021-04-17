@@ -1,0 +1,34 @@
+name: update-data
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+jobs:
+  update-data:
+    name: "Update Data"
+    runs-on: ubuntu-18.04
+    if: github.repository.full_name != 'azu/github-sponsor-report-template'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Set Env
+        run: |
+          echo "OWNER_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')" >> $GITHUB_ENV
+      - name: Update Data
+        run: npx github-sponsor-report@1
+        env:
+          OWNER_NAME: ${{ env.OWNER_NAME }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          PROJECT_ROOT_DIR: ${{ env.GITHUB_WORKSPACE }}
+      - name: Commit
+        uses: EndBug/add-and-commit@v6
+        with:
+          message: "Update Image"
+          push: true
