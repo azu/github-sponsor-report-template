@@ -13,6 +13,8 @@ GitHub Sponsors reporting page.
 ## Usage
 
 1. [Use this Template](https://github.com/azu/github-sponsor-report-template/generate)
+   - Recommend: create a repository as `private`
+   - :warning: Some data includes private data
 2. Set `PERSONAL_GITHUB_TOKEN` to your repo's secrets
    - [New personal access token](https://github.com/settings/tokens/new) → select `read:org` and `user` permission
    - <https://github.com/{yourname}/{repo}/settings/secrets/actions>
