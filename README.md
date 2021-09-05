@@ -26,4 +26,4 @@ After the setup, update data every hour by GitHub Actions.
 
 ---
 
-Based on <https://github.com/azu/github-sponsor-report-template>
+Created by [github-sponsor-report](https://github.com/azu/github-sponsor-report)
