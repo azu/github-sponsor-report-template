@@ -1,14 +1,6 @@
 # GitHub Sponsor Report 
 
-GitHub Sponsors reporting page.
-
-## Sponsors Count
-
-![sponsors count](./docs/img/sponsors_count.svg)
-
-## Monthly Estimated Income(Dollar)
-
-![estimatedIncomeDollar](docs/img/estimated_income_dollar.svg)
+Create GitHub Sponsors reporting page for own.
 
 ## Usage
 
@@ -23,5 +15,15 @@ GitHub Sponsors reporting page.
    2. Run workflow
 
 After the setup, update data every hour by GitHub Actions.
+
+## Sponsors Count
+
+![sponsors count](./docs/img/sponsors_count.svg)
+
+## Monthly Estimated Income(Dollar)
+
+![estimatedIncomeDollar](docs/img/estimated_income_dollar.svg)
+
+---
 
 Based on <https://github.com/azu/github-sponsor-report-template>
